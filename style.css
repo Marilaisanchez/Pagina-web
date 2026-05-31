@@ -453,6 +453,27 @@ body{
     font-size: 13px;
 }
 
+.contacto{
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.contacto h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contacto-info{
+    line-height: 2;
+}
+
+.contacto-info ul{
+    margin-left: 20px;
+}
+
 .nosotros-banner{
     display: flex;
     align-items: center;
