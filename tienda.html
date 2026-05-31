@@ -44,17 +44,27 @@
 
     <section class="buscador-section">
 
-            <div class="buscador">
-                <input type="text" placeholder="Buscar productos...">
+        <div class="ordenar">
+            <label for="ordenarProductos">Ordenar por:</label>
 
-                <img src="img/search.png" alt="Buscar">
-            </div>
+            <select id="ordenarProductos">
+                <option>Más recientes</option>
+                <option>A-Z</option>
+                <option>Z-A</option>
+                <option>Precio ↑</option>
+                <option>Precio ↓</option>
+            </select>
+        </div>
 
-            <div class="ordenar">
-                <p>Ordenar por: Más recientes</p>
-            </div>
+        <div class="buscador">
+            <input type="text" id="buscarProducto" placeholder="Buscar productos...">
 
-        </section>
+            <button id="btnBuscar">
+                <img src="img_tienda/search_icon.png" alt="Buscar">
+            </button>
+        </div>
+
+    </section>
 
         <section class="categorias-tienda">
             <button class="categoria-activa">Todos</button>
@@ -62,7 +72,6 @@
             <button>Carretes</button>
             <button>Señuelos</button>
             <button>Ropa</button>
-            <button>Accesorios</button>
         </section>
 
         <section class="productos-tienda">
