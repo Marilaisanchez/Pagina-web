@@ -47,4 +47,3 @@ function mostrarProducto(producto){
     });
 
 }
-
