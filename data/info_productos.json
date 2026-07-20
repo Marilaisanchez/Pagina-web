@@ -1,0 +1,74 @@
+[
+    {
+        "id": "carrete-challenger",
+        "nombre": "Carrete DMK",
+        "modelo": "Modelo CHALLENGER",
+        "categoria": "Carretes",
+        "precio": 45000,
+        "imagen": "img_tienda/imagen_carrete_inicio.png",
+        "descripcion": "Carrete baitcasting resistente y cómodo, diseñado para ofrecer lanzamientos suaves y precisos.",
+        "envio": true,
+        "retiro": true,
+        "stock": 8,
+        "detalles": [
+            "Diseño compacto y ergonómico",
+            "Sistema de lanzamiento suave",
+            "Ideal para pesca deportiva",
+            "Material resistente"
+        ]
+    },
+    {
+        "id": "cana-spinning",
+        "nombre": "Caña Spinning DMK",
+        "modelo": "Carbono 2.10 m",
+        "categoria": "Cañas",
+        "precio": 35000,
+        "imagen": "img/cana.png",
+        "descripcion": "Caña ligera de carbono, ideal para jornadas de pesca en río o mar.",
+        "envio": true,
+        "retiro": true,
+        "stock": 5,
+        "detalles": [
+            "Longitud de 2.10 metros",
+            "Fabricada en carbono",
+            "Mango antideslizante",
+            "Acción media"
+        ]
+    },
+    {
+        "id": "senuelo-minnow",
+        "nombre": "Señuelo Minnow",
+        "modelo": "DMK 11 cm",
+        "categoria": "Señuelos",
+        "precio": 6500,
+        "imagen": "img/senuelo.png",
+        "descripcion": "Señuelo tipo minnow con movimiento atractivo y acabado realista.",
+        "envio": true,
+        "retiro": true,
+        "stock": 12,
+        "detalles": [
+            "Longitud de 11 centímetros",
+            "Movimiento realista",
+            "Anzuelos resistentes",
+            "Ideal para distintas especies"
+        ]
+    },
+    {
+        "id": "sombrero-columbia",
+        "nombre": "Sombrero Columbia",
+        "modelo": "Protección UV",
+        "categoria": "Ropa",
+        "precio": 10000,
+        "imagen": "img/sombrero.png",
+        "descripcion": "Sombrero ligero y transpirable para protegerte durante tus jornadas al aire libre.",
+        "envio": true,
+        "retiro": true,
+        "stock": 3,
+        "detalles": [
+            "Protección contra el sol",
+            "Tela ligera",
+            "Diseño transpirable",
+            "Protección para cuello"
+        ]
+    }
+]

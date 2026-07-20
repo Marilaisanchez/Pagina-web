@@ -25,50 +25,44 @@
       </div>
     </header>
 
-    <section class="buscador-section">
+    <main class="detalle-producto">
 
-        <div class="ordenar">
-            <label for="ordenarProductos">Ordenar por:</label>
-
-            <select id="ordenarProductos">
-                <option>Más recientes</option>
-                <option>A-Z</option>
-                <option>Z-A</option>
-                <option>Precio ↑</option>
-                <option>Precio ↓</option>
-            </select>
+        <div class="detalle-imagen">
+            <img id="imagenProducto" src="" alt="">
         </div>
 
-        <div class="buscador">
-            <input type="text" id="buscarProducto" placeholder="Buscar productos...">
+        <div class="detalle-info">
 
-            <button id="btnBuscar">
-                <img src="img_tienda/search_icon.png" alt="Buscar">
+            <a href="tienda.html" class="volver">
+                ← Volver a la tienda
+            </a>
+
+            <p id="categoriaProducto" class="categoria-producto"></p>
+
+            <h1 id="nombreProducto"></h1>
+
+            <p id="modeloProducto" class="modelo-producto"></p>
+
+            <h2 id="precioProducto" class="precio-producto"></h2>
+
+            <p id="descripcionProducto" class="descripcion-producto"></p>
+
+            <div class="caracteristicas-producto">
+                <h3>Características</h3>
+                <ul id="listaDetalles"></ul>
+            </div>
+
+            <button class="btn-comprar">
+                Agregar al carrito
             </button>
+
         </div>
 
-    </section>
+    </main>
 
-        <section class="categorias-tienda">
-            <button class="categoria-activa">Todos</button>
-            <button>Cañas</button>
-            <button>Carretes</button>
-            <button>Señuelos</button>
-            <button>Ropa</button>
-        </section>
+    <script src="js/producto.js"></script>
 
-        <section class="productos-tienda" id="lista-productos">
-            <!-- Aquí JavaScript agregará los productos -->
-        </section>
-
-        <section class="paginacion">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-        </section>
-
-        <footer class="footer">
+    <footer class="footer">
             <img src="img_footer/pescado_decorativo_footer.png" alt="" class="footer-decoracion-pescado">
 
             <div class="footer-texto">
@@ -102,8 +96,9 @@
             </footer>
 
     </main>
-    <script src="js/tienda.js"></script>
 
 </body>
 
 </html>
+
+
