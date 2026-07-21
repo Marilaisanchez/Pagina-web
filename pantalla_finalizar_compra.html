@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Finalizar compra | DMK Fishing Store</title>
+</head>
+
+<body>
+
+    <div class="desktop">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <a href="index.html" class="enlace-logo">
+
+                <img
+                    src="img_header/logo_header.png"
+                    alt="DMK Fishing Store"
+                    class="logo"
+                >
+
+            </a>
+
+            <nav class="navbar">
+
+                <a href="index.html">
+                    INICIO
+                </a>
+
+                <a href="tienda.html">
+                    TIENDA
+                </a>
+
+                <a href="nosotros.html">
+                    NOSOTROS
+                </a>
+
+                <a href="contacto.html">
+                    CONTACTO
+                </a>
+
+            </nav>
+
+            <div class="header-icons">
+
+                <a
+                    href="pantalla_carrito.html"
+                    class="enlace-carrito"
+                    aria-label="Ver carrito"
+                >
+
+                    <img
+                        src="img_header/carrito_icon.png"
+                        alt="Carrito"
+                        class="header-icon-img"
+                    >
+
+                    <span
+                        id="contadorCarrito"
+                        class="contador-carrito"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO -->
+
+        <main class="pagina-finalizar">
+
+            <!-- Encabezado -->
+
+            <section class="finalizar-encabezado">
+
+                <div>
+
+                    <span class="finalizar-etiqueta">
+                        Último paso
+                    </span>
+
+                    <h1>
+                        Finalizá tu compra
+                    </h1>
+
+                    <p>
+                        Completá tus datos para que podamos
+                        coordinar la disponibilidad, el pago
+                        y la entrega de tu pedido.
+                    </p>
+
+                </div>
+
+                <a
+                    href="pantalla_carrito.html"
+                    class="btn-volver-carrito"
+                >
+                    ← Volver al carrito
+                </a>
+
+            </section>
+
+
+            <!-- Formulario y resumen -->
+
+            <section class="finalizar-layout">
+
+                <!-- FORMULARIO -->
+
+                <form
+                    id="formularioCompra"
+                    class="formulario-compra"
+                >
+
+                    <!-- Datos personales -->
+
+                    <section class="seccion-formulario">
+
+                        <div class="titulo-formulario">
+
+                            <span>01</span>
+
+                            <div>
+                                <p>Información personal</p>
+                                <h2>Tus datos</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="campos-formulario dos-columnas">
+
+                            <div class="campo-formulario">
+
+                                <label for="nombreCliente">
+                                    Nombre completo
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nombreCliente"
+                                    name="nombreCliente"
+                                    placeholder="Ejemplo: María González"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="campo-formulario">
+
+                                <label for="telefonoCliente">
+                                    Teléfono
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="telefonoCliente"
+                                    name="telefonoCliente"
+                                    placeholder="8888-8888"
+                                    autocomplete="tel"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="campo-formulario campo-completo">
+
+                                <label for="correoCliente">
+                                    Correo electrónico
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="correoCliente"
+                                    name="correoCliente"
+                                    placeholder="correo@ejemplo.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Entrega -->
+
+                    <section class="seccion-formulario">
+
+                        <div class="titulo-formulario">
+
+                            <span>02</span>
+
+                            <div>
+                                <p>Forma de entrega</p>
+                                <h2>¿Cómo recibirás el pedido?</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="opciones-seleccion">
+
+                            <label class="opcion-compra">
+
+                                <input
+                                    type="radio"
+                                    name="tipoEntrega"
+                                    value="Envío"
+                                    checked
+                                >
+
+                                <span class="opcion-marca"></span>
+
+                                <span class="opcion-icono">
+                                    🚚
+                                </span>
+
+                                <span class="opcion-texto">
+
+                                    <strong>
+                                        Envío
+                                    </strong>
+
+                                    <small>
+                                        Coordinaremos el costo y
+                                        la fecha de entrega.
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+                            <label class="opcion-compra">
+
+                                <input
+                                    type="radio"
+                                    name="tipoEntrega"
+                                    value="Retiro en tienda"
+                                >
+
+                                <span class="opcion-marca"></span>
+
+                                <span class="opcion-icono">
+                                    📍
+                                </span>
+
+                                <span class="opcion-texto">
+
+                                    <strong>
+                                        Retiro en tienda
+                                    </strong>
+
+                                    <small>
+                                        Retirá el pedido en
+                                        Limón, Costa Rica.
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div
+                            class="campos-formulario dos-columnas"
+                            id="camposDireccion"
+                        >
+
+                            <div class="campo-formulario">
+
+                                <label for="provinciaCliente">
+                                    Provincia
+                                </label>
+
+                                <select
+                                    id="provinciaCliente"
+                                    name="provinciaCliente"
+                                >
+                                    <option value="">
+                                        Seleccioná una provincia
+                                    </option>
+
+                                    <option value="San José">
+                                        San José
+                                    </option>
+
+                                    <option value="Alajuela">
+                                        Alajuela
+                                    </option>
+
+                                    <option value="Cartago">
+                                        Cartago
+                                    </option>
+
+                                    <option value="Heredia">
+                                        Heredia
+                                    </option>
+
+                                    <option value="Guanacaste">
+                                        Guanacaste
+                                    </option>
+
+                                    <option value="Puntarenas">
+                                        Puntarenas
+                                    </option>
+
+                                    <option value="Limón">
+                                        Limón
+                                    </option>
+                                </select>
+
+                            </div>
+
+                            <div class="campo-formulario">
+
+                                <label for="cantonCliente">
+                                    Cantón
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="cantonCliente"
+                                    name="cantonCliente"
+                                    placeholder="Escribí tu cantón"
+                                >
+
+                            </div>
+
+                            <div class="campo-formulario campo-completo">
+
+                                <label for="direccionCliente">
+                                    Dirección exacta
+                                </label>
+
+                                <textarea
+                                    id="direccionCliente"
+                                    name="direccionCliente"
+                                    rows="4"
+                                    placeholder="Provincia, cantón, distrito y señas exactas"
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Pago -->
+
+                    <section class="seccion-formulario">
+
+                        <div class="titulo-formulario">
+
+                            <span>03</span>
+
+                            <div>
+                                <p>Forma de pago</p>
+                                <h2>Seleccioná una opción</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="opciones-seleccion opciones-pago">
+
+                            <label class="opcion-compra">
+
+                                <input
+                                    type="radio"
+                                    name="metodoPago"
+                                    value="SINPE Móvil"
+                                    checked
+                                >
+
+                                <span class="opcion-marca"></span>
+
+                                <span class="opcion-icono">
+                                    📱
+                                </span>
+
+                                <span class="opcion-texto">
+
+                                    <strong>
+                                        SINPE Móvil
+                                    </strong>
+
+                                    <small>
+                                        Recibirás los datos para
+                                        realizar el pago.
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+                            <label class="opcion-compra">
+
+                                <input
+                                    type="radio"
+                                    name="metodoPago"
+                                    value="Transferencia bancaria"
+                                >
+
+                                <span class="opcion-marca"></span>
+
+                                <span class="opcion-icono">
+                                    🏦
+                                </span>
+
+                                <span class="opcion-texto">
+
+                                    <strong>
+                                        Transferencia bancaria
+                                    </strong>
+
+                                    <small>
+                                        Te enviaremos la información
+                                        de la cuenta.
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+                            <label class="opcion-compra">
+
+                                <input
+                                    type="radio"
+                                    name="metodoPago"
+                                    value="Pago al retirar"
+                                >
+
+                                <span class="opcion-marca"></span>
+
+                                <span class="opcion-icono">
+                                    💵
+                                </span>
+
+                                <span class="opcion-texto">
+
+                                    <strong>
+                                        Pago al retirar
+                                    </strong>
+
+                                    <small>
+                                        Disponible al coordinar
+                                        el retiro en tienda.
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Comentarios -->
+
+                    <section class="seccion-formulario">
+
+                        <div class="titulo-formulario">
+
+                            <span>04</span>
+
+                            <div>
+                                <p>Información adicional</p>
+                                <h2>Notas del pedido</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="campo-formulario">
+
+                            <label for="notasCliente">
+                                Comentarios opcionales
+                            </label>
+
+                            <textarea
+                                id="notasCliente"
+                                name="notasCliente"
+                                rows="4"
+                                placeholder="Podés agregar indicaciones o consultas sobre tu pedido"
+                            ></textarea>
+
+                        </div>
+
+                    </section>
+
+                </form>
+
+
+                <!-- RESUMEN -->
+
+                <aside class="resumen-finalizar">
+
+                    <span class="resumen-finalizar-etiqueta">
+                        Tu pedido
+                    </span>
+
+                    <h2>
+                        Resumen de compra
+                    </h2>
+
+                    <div id="productosResumenCompra">
+                        <!-- JavaScript inserta los productos -->
+                    </div>
+
+                    <div class="resumen-finalizar-separador"></div>
+
+                    <div class="resumen-finalizar-fila">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="subtotalFinalizar">
+                            ₡ 0
+                        </strong>
+
+                    </div>
+
+                    <div class="resumen-finalizar-fila">
+
+                        <span>
+                            Envío
+                        </span>
+
+                        <strong
+                            id="costoEnvioFinalizar"
+                            class="envio-coordinar"
+                        >
+                            ₡ 0
+                        </strong>
+
+                    </div>
+
+                    <div class="resumen-finalizar-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="totalFinalizar">
+                            ₡ 0
+                        </strong>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        form="formularioCompra"
+                        class="btn-confirmar-pedido"
+                    >
+                        Confirmar pedido
+                    </button>
+
+                    <p class="nota-confirmacion">
+                        Al confirmar, se abrirá WhatsApp con
+                        los datos y productos de tu pedido.
+                    </p>
+
+                    <div
+                        id="mensajeFormulario"
+                        class="mensaje-formulario"
+                        aria-live="polite"
+                    ></div>
+
+                </aside>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            <img
+                src="img_footer/pescado_decorativo_footer.png"
+                alt=""
+                class="footer-decoracion-pescado"
+            >
+
+            <div class="footer-texto">
+
+                <h2>
+                    ¿Necesitás ayuda?
+                </h2>
+
+                <p>
+                    Te asesoramos para encontrar el equipo ideal.
+                </p>
+
+            </div>
+
+            <img
+                src="img_footer/cangrejo_decorativo_footer.png"
+                alt=""
+                class="footer-decoracion-cangrejo"
+            >
+
+            <div class="footer-redes">
+
+                <a
+                    href="https://wa.me/50683458158"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="img_footer/logo_whatsapp_footer.png"
+                        alt="WhatsApp"
+                    >
+                </a>
+
+                <a
+                    href="https://www.instagram.com/store_dmk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="img_footer/logo_insta_footer.png"
+                        alt="Instagram"
+                    >
+                </a>
+
+                <a href="#">
+                    <img
+                        src="img_footer/logo_facebook_footer.png"
+                        alt="Facebook"
+                    >
+                </a>
+
+                <a href="#">
+                    <img
+                        src="img_footer/logo_tiktok_footer.png"
+                        alt="TikTok"
+                    >
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                © 2026 DMK Fishing Store · Todos los derechos reservados
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="js/finalizar_compra.js"></script>
+
+</body>
+
+</html>
