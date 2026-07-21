@@ -34,23 +34,140 @@
       </div>
     </header>
 
-    <main class="carrito">
+    <main class="pagina-carrito">
 
-        <h1>Mi carrito</h1>
+            <section class="carrito-encabezado">
 
-        <div id="productosCarrito">
-            <!-- Aquí aparecerán los productos -->
-        </div>
+                <div>
 
-        <div class="resumen-carrito">
-            <h2>Total: <span id="totalCarrito">₡0</span></h2>
+                    <span class="carrito-etiqueta">
+                        Tu selección
+                    </span>
 
-            <button class="btn-comprar">
-                Finalizar compra
-            </button>
-        </div>
+                    <h1>
+                        Mi carrito
+                    </h1>
 
-    </main>
+                    <p>
+                        Revisá tus productos, cambiá las cantidades
+                        o eliminá lo que ya no necesités.
+                    </p>
+
+                </div>
+
+                <a
+                    href="tienda.html"
+                    class="btn-seguir-comprando"
+                >
+                    ← Seguir comprando
+                </a>
+
+            </section>
+
+
+            <section class="carrito-contenido">
+
+                <!-- PRODUCTOS -->
+
+                <div class="carrito-lista">
+
+                    <div class="carrito-lista-encabezado">
+
+                        <div>
+
+                            <p>
+                                Productos seleccionados
+                            </p>
+
+                            <h2>
+                                Tu pedido
+                            </h2>
+
+                        </div>
+
+                        <span id="cantidadProductosCarrito">
+                            0 productos
+                        </span>
+
+                    </div>
+
+                    <div id="productosCarrito">
+                        <!-- JavaScript inserta los productos -->
+                    </div>
+
+                </div>
+
+
+                <!-- RESUMEN -->
+
+                <aside
+                    class="resumen-carrito"
+                    id="resumenCarrito"
+                >
+
+                    <span class="resumen-etiqueta">
+                        Resumen
+                    </span>
+
+                    <h2>
+                        Resumen del carrito
+                    </h2>
+
+                    <div class="resumen-fila">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="subtotalCarrito">
+                            ₡ 0
+                        </strong>
+
+                    </div>
+
+                    <div class="resumen-fila">
+
+                        <span>
+                            Envío
+                        </span>
+
+                        <strong class="envio-pendiente">
+                            Por coordinar
+                        </strong>
+
+                    </div>
+
+                    <div class="resumen-separador"></div>
+
+                    <div class="resumen-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="totalCarrito">
+                            ₡ 0
+                        </strong>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-finalizar"
+                        id="btnFinalizarCompra"
+                    >
+                        Finalizar compra
+                    </button>
+
+                    <p class="resumen-nota">
+                        El envío y la disponibilidad final se
+                        confirmarán antes de completar el pedido.
+                    </p>
+
+                </aside>
+
+            </section>
+
 
     <script src="js/carrito.js"></script>
 
