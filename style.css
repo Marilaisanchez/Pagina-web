@@ -28,8 +28,8 @@ body{
 }
 
 .logo {
-    width: 175px;
-    height: auto;
+    width: 250px;
+    height: 250px;
 }
 
 .navbar {
@@ -431,21 +431,32 @@ body{
 /* CARRITO */
 .enlace-carrito {
     position: relative;
-    display: inline-flex;
+    width: 55px;
+    height: 55px;
+
+    display: flex;
     align-items: center;
     justify-content: center;
+
+    overflow: visible;
 }
 
-.header-icon-img {
-    width: 28px;
-    height: 28px;
+.enlace-carrito .header-icon-img {
+    width: 40px;
+    height: 40px;
     object-fit: contain;
+
+    transform: scale(1.7);
+}
+
+.header-icons-img {
+    width: 40px;
 }
 
 .contador-carrito {
     position: absolute;
-    top: -8px;
-    right: -10px;
+    top: 0;
+    right: 0;
 
     min-width: 18px;
     height: 18px;
@@ -455,13 +466,13 @@ body{
     align-items: center;
     justify-content: center;
 
-    background-color: #62dbe0;
-    color: #111;
+    background-color: #72e3e7;
+    color: black;
     border-radius: 50%;
 
     font-size: 11px;
     font-weight: bold;
-    box-sizing: border-box;
+    z-index: 2;
 }
 
 .carrito-contenedor {
