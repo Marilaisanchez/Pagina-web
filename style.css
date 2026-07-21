@@ -797,127 +797,780 @@ body{
 }
 
 /* CONTACTO */
-.contacto{
-    width: 80%;
-    margin: 50px auto;
-    padding: 40px;
-    background-color: #ffffff;
-    border-radius: 12px;
+.pagina-contacto {
+    padding-bottom: 100px;
 }
 
-.contacto h2{
+
+/* Encabezado/contacto */
+.contacto-hero {
+    width: min(900px, 88%);
+    margin: 70px auto 65px;
+
     text-align: center;
+}
+
+.contacto-etiqueta {
+    display: inline-block;
+
+    margin-bottom: 18px;
+    padding: 8px 17px;
+
+    background-color: #9deef0;
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contacto-hero h1 {
+    max-width: 800px;
+    margin: 0 auto 22px;
+
+    font-size: clamp(43px, 5vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.contacto-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+
+    color: #535b5d;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* Contenido principal */
+
+.contacto-principal {
+    width: min(1120px, 90%);
+    margin: 0 auto 90px;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+}
+
+
+/* Tarjeta izquierda */
+
+.contacto-datos {
+    padding: 45px;
+
+    background-color: #f3f7f7;
+    border-radius: 24px;
+}
+
+.subtitulo-contacto {
+    margin: 0 0 9px;
+
+    color: #278e92;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.contacto-datos > h2 {
+    max-width: 530px;
+    margin: 0 0 14px;
+
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.contacto-introduccion {
+    max-width: 570px;
+    margin: 0 0 32px;
+
+    color: #596164;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.dato-contacto {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 19px 0;
+
+    border-bottom: 1px solid #dce5e5;
+}
+
+.dato-contacto:last-child {
+    border-bottom: none;
+}
+
+.dato-contacto-icono {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #9deef0;
+    border-radius: 14px;
+
+    font-size: 20px;
+}
+
+.dato-contacto span {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #657073;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.dato-contacto a,
+.dato-contacto p {
+    margin: 0;
+
+    color: #15191a;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dato-contacto a:hover {
+    color: #278e92;
+}
+
+
+/* Columna derecha */
+
+.contacto-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+
+/* Horario */
+
+.horario-contacto {
+    padding: 34px;
+
+    background-color: #15191a;
+    color: white;
+    border-radius: 24px;
+}
+
+.horario-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
     margin-bottom: 30px;
 }
 
-.contacto-info{
-    line-height: 2;
+.horario-encabezado p {
+    margin: 0 0 7px;
+
+    color: #9deef0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.contacto-info ul{
-    margin-left: 20px;
+.horario-encabezado h2 {
+    margin: 0;
+    font-size: 27px;
 }
 
-/* NOSOTROS */ 
-.nosotros-banner{
+.horario-icono {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #9deef0;
+    color: #15191a;
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+.horario-fila {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 17px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.horario-fila span {
+    color: #cad1d2;
+}
+
+.horario-fila strong {
+    text-align: right;
+}
+
+.horario-cerrado {
+    color: #9deef0;
+}
+
+
+/* Ubicación */
+
+.ubicacion-contacto {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 245px;
+    padding: 35px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #9deef0;
+    border-radius: 24px;
+}
+
+.ubicacion-contenido {
+    position: relative;
+    z-index: 2;
+
+    max-width: 340px;
+}
+
+.ubicacion-contenido > span {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #277f82;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.ubicacion-contenido h2 {
+    margin: 0 0 12px;
+    font-size: 29px;
+}
+
+.ubicacion-contenido p {
+    margin: 0 0 24px;
+
+    color: #334143;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.btn-mapa {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    background-color: #15191a;
+    color: white;
+    border-radius: 10px;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s,
+        background-color 0.2s;
+}
+
+.btn-mapa:hover {
+    background-color: #278e92;
+    transform: translateY(-2px);
+}
+
+.ubicacion-decoracion {
+    position: absolute;
+    right: -10px;
+    bottom: -35px;
+
+    font-size: 145px;
+    opacity: 0.15;
+}
+
+
+/* Redes */
+
+.redes-contacto {
+    width: min(1120px, 90%);
+    margin: 0 auto 90px;
+}
+
+.redes-contacto-titulo {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.redes-contacto-titulo p {
+    margin: 0 0 8px;
+
+    color: #278e92;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.redes-contacto-titulo h2 {
+    margin: 0;
+    font-size: 39px;
+}
+
+.redes-contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.red-contacto-card {
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: 52px 1fr auto;
+    align-items: center;
+    gap: 17px;
+
+    background-color: white;
+    color: #15191a;
+    border: 1px solid #e1e8e8;
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s,
+        border-color 0.25s;
+}
+
+.red-contacto-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #9deef0;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.red-contacto-icono {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #9deef0;
+    border-radius: 14px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.red-contacto-card h3 {
+    margin: 0 0 5px;
+    font-size: 19px;
+}
+
+.red-contacto-card p {
+    margin: 0;
+    color: #687174;
+}
+
+.red-contacto-card > strong {
+    font-size: 24px;
+}
+
+
+/* Llamado final */
+
+.contacto-llamado {
+    width: min(1060px, 86%);
+    margin: 0 auto;
+
+    padding: 44px 50px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 80px;
-    gap: 50px;
+    gap: 35px;
+
+    background-color: #edf8f8;
+    border-radius: 24px;
 }
 
-.nosotros-texto{
-    max-width: 550px;
+.contacto-llamado p {
+    margin: 0 0 8px;
+
+    color: #278e92;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.nosotros-texto h1{
-    font-size: 58px;
-    margin-bottom: 20px;
+.contacto-llamado h2 {
+    max-width: 630px;
+    margin: 0;
+
+    font-size: 31px;
+    line-height: 1.25;
 }
 
-.nosotros-texto p{
+.btn-contacto-whatsapp {
+    flex-shrink: 0;
+
+    padding: 14px 23px;
+
+    background-color: #15191a;
+    color: white;
+    border-radius: 10px;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s,
+        background-color 0.2s;
+}
+
+.btn-contacto-whatsapp:hover {
+    background-color: #46cdd2;
+    transform: translateY(-2px);
+}
+
+/* NOSOTROS */ 
+.nosotros-hero {
+    width: min(1180px, 90%);
+    margin: 55px auto 90px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.nosotros-hero-contenido {
+    padding-left: 15px;
+}
+
+.nosotros-etiqueta {
+    display: inline-block;
+
+    margin-bottom: 18px;
+    padding: 8px 16px;
+
+    background-color: #9deef0;
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nosotros-hero h1 {
+    margin: 0 0 24px;
+
+    font-size: clamp(45px, 5vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+}
+
+.nosotros-hero-contenido > p {
+    max-width: 510px;
+    margin-bottom: 32px;
+
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.75;
+    color: #4d5557;
 }
 
-.nosotros-imagen img{
-    width: 500px;
-    border-radius: 18px;
+.btn-nosotros-tienda {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background-color: #15191a;
+    color: white;
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-.historia-section{
-    padding: 20px 80px 60px;
+.btn-nosotros-tienda:hover {
+    background-color: #46cdd2;
+    transform: translateY(-2px);
 }
 
-.historia-texto{
-    max-width: 900px;
+.nosotros-hero-imagen {
+    height: 520px;
+    overflow: hidden;
+
+    border-radius: 30px 8px 30px 8px;
+    box-shadow: 15px 15px 0 #9deef0;
 }
 
-.historia-texto h2{
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.historia-texto p{
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.valores-section{
-    padding: 20px 80px 70px;
-}
-
-.valores-section h2{
-    font-size: 40px;
-    margin-bottom: 35px;
-}
-
-.valores-grid{
-    display: flex;
-    gap: 30px;
-}
-
-.valor-card{
-    background-color: white;
-    border-radius: 18px;
-    padding: 35px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.valor-card h3{
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.valor-card p{
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-.mision-vision{
-    display: flex;
-    gap: 30px;
-    padding: 0 80px 80px;
-}
-
-.mision-card,
-.vision-card{
-    background-color: #9DEEF0;
-    border-radius: 18px;
-    padding: 40px;
+.nosotros-hero-imagen img {
     width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
 }
 
-.mision-card h2,
-.vision-card h2{
-    font-size: 32px;
-    margin-bottom: 15px;
+
+/* Historia */
+
+.historia-nosotros {
+    width: min(1050px, 86%);
+    margin: 0 auto 100px;
+
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 40px;
+
+    padding: 60px;
+
+    background-color: #f3f7f7;
+    border-radius: 24px;
 }
 
-.mision-card p,
-.vision-card p{
+.historia-numero span {
+    font-size: 50px;
+    font-weight: bold;
+    color: #55d5d9;
+}
+
+.historia-numero div {
+    width: 2px;
+    height: 110px;
+    margin: 15px 0 0 25px;
+
+    background-color: #55d5d9;
+}
+
+.subtitulo-nosotros {
+    margin: 0 0 10px;
+
+    color: #278e92;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.historia-contenido h2 {
+    max-width: 680px;
+    margin: 0 0 25px;
+
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.historia-contenido > p:not(.subtitulo-nosotros) {
+    margin: 0 0 16px;
+
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.75;
+    color: #535b5d;
 }
+
+
+/* Valores */
+
+.valores-nosotros {
+    width: min(1180px, 90%);
+    margin: 0 auto 100px;
+}
+
+.titulo-seccion-nosotros {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.titulo-seccion-nosotros p {
+    margin-bottom: 8px;
+
+    color: #278e92;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.titulo-seccion-nosotros h2 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.valores-nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.valor-nosotros-card {
+    padding: 38px 30px;
+
+    background-color: white;
+    border: 1px solid #e2e9e9;
+    border-radius: 20px;
+
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.valor-nosotros-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.valor-icono {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 23px;
+
+    background-color: #9deef0;
+    border-radius: 14px;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.valor-nosotros-card h3 {
+    margin: 0 0 14px;
+    font-size: 23px;
+}
+
+.valor-nosotros-card p {
+    margin: 0;
+
+    color: #596164;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Misión y visión */
+
+.proposito-nosotros {
+    width: min(1100px, 88%);
+    margin: 0 auto 100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.proposito-card {
+    min-height: 250px;
+    padding: 42px;
+
+    border-radius: 22px;
+}
+
+.proposito-card > span {
+    display: block;
+    margin-bottom: 45px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.proposito-card h2 {
+    margin: 0 0 15px;
+    font-size: 31px;
+}
+
+.proposito-card p {
+    margin: 0;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.proposito-mision {
+    background-color: #15191a;
+    color: white;
+}
+
+.proposito-vision {
+    background-color: #9deef0;
+    color: #15191a;
+}
+
+
+/* Llamado final */
+
+.llamado-nosotros {
+    width: min(1100px, 88%);
+    margin: 0 auto 100px;
+    padding: 45px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    background-color: #edf8f8;
+    border-radius: 24px;
+}
+
+.llamado-nosotros p {
+    margin: 0 0 8px;
+
+    color: #278e92;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.llamado-nosotros h2 {
+    max-width: 660px;
+    margin: 0;
+
+    font-size: 31px;
+    line-height: 1.25;
+}
+
+.btn-nosotros-final {
+    flex-shrink: 0;
+
+    padding: 14px 23px;
+
+    background-color: #15191a;
+    color: white;
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: background-color 0.2s;
+}
+
+.btn-nosotros-final:hover {
+    background-color: #46cdd2;
+}
+

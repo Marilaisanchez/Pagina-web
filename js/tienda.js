@@ -6,10 +6,16 @@ const botonesCategorias = document.querySelectorAll(
 
 const selectOrdenar = document.getElementById("ordenarProductos");
 const contadorCarrito = document.getElementById("contadorCarrito");
+const inputBuscar =
+    document.getElementById("buscarProducto");
+
+const btnBuscar =
+    document.getElementById("btnBuscar");
 
 let productos = [];
 let categoriaActual = "Todos";
 let ordenActual = "recientes";
+let busquedaActual = "";
 
 function formatearPrecio(precio) {
     return `₡ ${precio.toLocaleString("es-CR")}`;
@@ -82,6 +88,14 @@ function mostrarProductos(lista) {
         .join("");
 }
 
+function normalizarTexto(texto) {
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+}
+
 function actualizarProductos() {
     let lista = [...productos];
 
@@ -90,6 +104,32 @@ function actualizarProductos() {
         lista = lista.filter(
             producto => producto.categoria === categoriaActual
         );
+    }
+
+        if (busquedaActual !== "") {
+        const textoBuscado =
+            normalizarTexto(busquedaActual);
+
+        lista = lista.filter(producto => {
+            const nombre =
+                normalizarTexto(producto.nombre || "");
+
+            const modelo =
+                normalizarTexto(producto.modelo || "");
+
+            const categoria =
+                normalizarTexto(producto.categoria || "");
+
+            const descripcion =
+                normalizarTexto(producto.descripcion || "");
+
+            return (
+                nombre.includes(textoBuscado) ||
+                modelo.includes(textoBuscado) ||
+                categoria.includes(textoBuscado) ||
+                descripcion.includes(textoBuscado)
+            );
+        });
     }
 
     // Ordenar los productos
@@ -157,6 +197,31 @@ function activarOrdenamiento() {
     });
 }
 
+function activarBuscador() {
+    function realizarBusqueda() {
+        busquedaActual = inputBuscar.value;
+
+        actualizarProductos();
+    }
+
+    btnBuscar.addEventListener("click", () => {
+        realizarBusqueda();
+    });
+
+    inputBuscar.addEventListener("keydown", evento => {
+        if (evento.key === "Enter") {
+            realizarBusqueda();
+        }
+    });
+
+    inputBuscar.addEventListener("input", () => {
+        if (inputBuscar.value.trim() === "") {
+            busquedaActual = "";
+            actualizarProductos();
+        }
+    });
+}
+
 async function cargarProductos() {
     try {
         const respuesta = await fetch(
@@ -174,6 +239,7 @@ async function cargarProductos() {
         actualizarProductos();
         activarFiltros();
         activarOrdenamiento();
+        activarBuscador();
         actualizarContadorCarrito();
 
     } catch (error) {
