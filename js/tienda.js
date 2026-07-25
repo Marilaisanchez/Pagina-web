@@ -40,6 +40,8 @@ function crearTarjeta(producto) {
         `;
     }
 
+    const agotado = producto.stock <= 0;
+
     return `
         <article class="producto-card">
 
@@ -49,6 +51,13 @@ function crearTarjeta(producto) {
             >
                 <div class="producto-imagen-contenedor">
                     ${imagenProducto}
+
+                    ${
+                        agotado
+                            ? `<span class="etiqueta-agotado">AGOTADO</span>`
+                            : ""
+                    }
+
                 </div>
 
                 <div class="producto-info">
@@ -65,8 +74,10 @@ function crearTarjeta(producto) {
                 class="btn-carrito"
                 type="button"
                 data-id="${producto.id}"
-                aria-label="Agregar ${producto.nombre} al carrito">
-                🛒
+                aria-label="Agregar ${producto.nombre} al carrito"
+                ${agotado ? "disabled" : ""}
+            >
+                ${agotado ? "Agotado" : "🛒"}
             </button>
 
         </article>
@@ -265,11 +276,36 @@ function guardarCarrito(carrito) {
 }
 
 function agregarAlCarrito(idProducto) {
+    const productoSeleccionado = productos.find(
+        producto => producto.id === idProducto
+    );
+
+    if (!productoSeleccionado) {
+        alert("No se encontró el producto.");
+        return;
+    }
+
+    if (productoSeleccionado.stock <= 0) {
+        alert("Este producto está agotado.");
+        return;
+    }
+
     const carrito = obtenerCarrito();
 
     const productoExistente = carrito.find(
         producto => producto.id === idProducto
     );
+
+    const cantidadActual = productoExistente
+        ? productoExistente.cantidad
+        : 0;
+
+    if (cantidadActual >= productoSeleccionado.stock) {
+        alert(
+            `Solo hay ${productoSeleccionado.stock} unidades disponibles.`
+        );
+        return;
+    }
 
     if (productoExistente) {
         productoExistente.cantidad++;
