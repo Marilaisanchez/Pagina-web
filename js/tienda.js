@@ -322,21 +322,6 @@ function agregarAlCarrito(idProducto) {
     alert("Producto agregado al carrito");
 }
 
-function actualizarContadorCarrito() {
-    if (!contadorCarrito) {
-        return;
-    }
-
-    const carrito = obtenerCarrito();
-
-    const cantidadTotal = carrito.reduce(
-        (total, producto) =>
-            total + producto.cantidad,
-        0
-    );
-
-    contadorCarrito.textContent = cantidadTotal;
-}
 
 contenedorProductos.addEventListener(
     "click",

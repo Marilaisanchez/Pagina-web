@@ -22,21 +22,6 @@ function guardarCarrito(carrito) {
     );
 }
 
-function actualizarContadorCarrito() {
-    if (!contadorCarrito) {
-        return;
-    }
-
-    const carrito = obtenerCarrito();
-
-    const cantidadTotal = carrito.reduce(
-        (total, producto) =>
-            total + producto.cantidad,
-        0
-    );
-
-    contadorCarrito.textContent = cantidadTotal;
-}
 
 function agregarAlCarrito(idProducto) {
     const carrito = obtenerCarrito();
@@ -97,6 +82,11 @@ function mostrarProducto(producto) {
         li.textContent = detalle;
         lista.appendChild(li);
     });
+
+    if (producto.stock <= 0) {
+    btnAgregarCarrito.disabled = true;
+    btnAgregarCarrito.textContent = "Agotado";
+    }
 }
 
 async function cargarProducto() {
@@ -138,7 +128,7 @@ async function cargarProducto() {
 }
 
 btnAgregarCarrito.addEventListener("click", () => {
-    if (!productoActual) {
+    if (!productoActual || productoActual.stock <= 0) {
         return;
     }
 
