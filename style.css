@@ -2659,7 +2659,7 @@ body{
     opacity: 0.75;
 }
 
-/* Responsive */
+/* Adaptabilidad */
 
 @media (max-width: 950px) {
     .finalizar-layout {
